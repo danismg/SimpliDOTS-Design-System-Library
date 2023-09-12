@@ -52,9 +52,7 @@ export class FlagComponent {
     return `flag__desc flag__desc-${FlagColor[this.color].toLowerCase()}`;
   }
   getClassIcon() {
-    return `./../../../assets/icon/info/ic-${FlagIcon[
-      this.icon
-    ].toLowerCase()}.svg`;
+    return `./assets/icon/info/ic-${FlagIcon[this.icon].toLowerCase()}.svg `;
   }
 
   closeComponent(): void {

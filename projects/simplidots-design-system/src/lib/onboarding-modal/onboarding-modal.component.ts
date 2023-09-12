@@ -11,7 +11,7 @@ export class OnboardingModalComponent {
   @Input() title: string = '';
   @Input() description: string = '';
   @Input() btnSettings: ButtonSetting[] = [];
-  @Input() icon: string = 'onboarding-modal';
+  @Input() icon!: string;
   @Input() colorBg: string = 'rgba(73, 86, 94, 0.5)';
   @Input() show: boolean = true;
   @Output() onButtoClick = new EventEmitter<ColorEnum>();
