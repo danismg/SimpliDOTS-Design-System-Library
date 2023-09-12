@@ -1,34 +1,27 @@
 import { Component } from '@angular/core';
+import { ColorEnum } from 'src/assets/beheviors/button/ColorEnum';
+import { SpacingEnum } from 'src/assets/beheviors/button/SpacingEnum';
+import { CirleColor } from '../assets/beheviors/circle-priority/CircleColor';
+import { ColorStatus } from '../assets/beheviors/flag/label-status/ColorStatus';
+import { BannerMode } from 'src/assets/beheviors/banner/BannerMode';
+import { FlagColor, FlagIcon } from '../assets/beheviors/flag/FlagMode';
 import {
-  ButtonMode,
-  ColorEnum,
-  SpacingEnum,
-  BannerMode,
-  BgCheckBox,
-  ConditionCheckBox,
-  ModeCheckBox,
-  ValidCheckBox,
-  FlagColor,
-  FlagIcon,
-  BreadCrumbColor,
-  EmptyStateIcon,
-  ColorStatus,
-  ProgressTrakerMode,
-  ProgressTrakerCondition,
   SctMessageColor,
   SctMessageIcon,
-  TextFieldInput,
-  textareaSize,
+} from 'src/assets/beheviors/section-message/SctMessageMode';
+import { TextFieldInput } from 'src/assets/beheviors/text-field/TextFieldMode';
+import ProgressBarSetting from './models/ProgressBarSetting';
+import ButtonSetting from './models/ButtonSetting';
+import ProgressTrakerSetting from './models/ProgressTrakerSetting';
+import { ProgressTrakerMode } from 'src/assets/beheviors/progress-traker/ProgressTrakerMode';
+import {
   textareaMode,
-  ButtonSetting,
-  BreadCrumbsSetting,
-  InfoFlagLongSetting,
-  PaginationSetting,
-  ProgressBarSetting,
-  ProgressIndicatorSetting,
-  ProgressTrakerSetting,
-  CirleColor,
-} from 'simplidots-design-system';
+  textareaSize,
+} from 'src/assets/beheviors/textarea/textareaMode';
+import InfoFlagLongSetting from './models/InfoFlagLongSetting';
+import ProgressIndicatorSetting from './models/ProgressIndicatorSetting';
+import PaginationSetting from './models/PaginationSetting';
+import BreadCrumbsSetting from './models/BreadCrumbsSetting';
 
 @Component({
   selector: 'app-root',
@@ -202,7 +195,7 @@ export class AppComponent {
     return [
       {
         location: 'balbla',
-        link: 'jhdfasd',
+        link: 'jhdfasd'
       },
       {
         location: 'balbla',

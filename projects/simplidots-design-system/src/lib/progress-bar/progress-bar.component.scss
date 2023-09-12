@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  font-family: "Roboto", sans-serif !important;
+}
+@import "../../assets/assets-color/color.scss";
+@import "../../assets/assets-color/font.scss";
+
+.progress-bar__component {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.progress-bar__line {
+  display: flex;
+  //   width: 20px;
+  height: 6px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 3px;
+}
+
+.line-success {
+  background: var(--red-dark-200, #09c4b2);
+  width: {
+    shape-image-threshold: ceil($number: 0);
+  }
+}
+.line-warning {
+  background: var(--red-dark-200, #fba02e);
+}
+.line-danger {
+  background: var(--red-dark-200, #ef627b);
+}
+.progress-bar__bg-line {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  width: 608px;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--neutral-50, #c2c7cf);
+}

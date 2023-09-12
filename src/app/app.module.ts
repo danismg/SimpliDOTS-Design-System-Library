@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { DesignSystemSimplidotsModule } from 'design-system-simplidots';
+import { SimplidotsDesignSystemModule } from 'simplidots-design-system';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, DesignSystemSimplidotsModule],
+  imports: [BrowserModule, SimplidotsDesignSystemModule],
   providers: [],
   bootstrap: [AppComponent],
 })

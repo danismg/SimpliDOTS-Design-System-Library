@@ -1,0 +1,32 @@
+<div *ngIf="show === true" class="empty__items">
+  <div class="empty__item-top">
+    <!-- <div class="temp__icon-itemplate"> -->
+    <img class="temp__icon-itemplate" [src]="getIconName()" alt="" />
+    <!-- </div> -->
+  </div>
+  <div class="empty__item-down">
+    <div *ngIf="showStyles()" class="empty__texts">
+      <p class="empty__title">{{ title }}</p>
+      <p class="empty__desc">{{ description }}</p>
+    </div>
+    <div class="empty__btns">
+      <div class="empty__btn-top">
+        <app-button
+          *ngFor="let btnSetting of btnSettings"
+          [color]="btnSetting.color"
+          [spacing]="btnSetting.compact"
+          (onClick)="funcButton(btnSetting)"
+          >{{ btnSetting.title }}</app-button
+        >
+      </div>
+
+      <app-button
+        *ngFor="let btnSetting of btnLinkSettings"
+        [color]="btnSetting.color"
+        [spacing]="btnSetting.compact"
+        (onClick)="funcButton(btnSetting)"
+        >{{ btnSetting.title }}</app-button
+      >
+    </div>
+  </div>
+</div>

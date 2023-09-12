@@ -114,6 +114,36 @@
           }
         }
       }
+    },
+    "simplidots-design-system": {
+      "projectType": "library",
+      "root": "projects/simplidots-design-system",
+      "sourceRoot": "projects/simplidots-design-system/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/simplidots-design-system/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/simplidots-design-system/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/simplidots-design-system/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/simplidots-design-system/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
+          }
+        }
+      }
     }
   },
   "cli": {

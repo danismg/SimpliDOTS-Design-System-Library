@@ -1,6 +1,281 @@
-<app-button
-  [color]="colorBtn.PRIMARY"
-  [spacing]="spacingBtn.DEFAULT"
-  (onClick)="goToFacebook()"
-  >Go To Google</app-button
->
+<div class="template">
+  <div class="content">
+    <div class="temp__icon">
+      <img class="temp__icon" src="./../assets/Stickersheet.svg" alt="" />
+    </div>
+    <div class="temp__descs">
+      <p class="temp__title-text">Component SimpliDOTS</p>
+      <p class="temp__desc">
+        Common component examples ready to be copy and pasted into your designs
+      </p>
+    </div>
+  </div>
+  <div class="temp__items">
+    <div class="temp__container">
+      <div class="temp__tabel">
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 1fr"></th>
+              <th style="width: 1fr; color: red">Component</th>
+              <th style="width: 3fr; color: red">View</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Label Status -->
+            <tr>
+              <th style="width: 1fr">
+                <img src="./../assets/icon/info/ic-success.svg" alt="" />
+              </th>
+              <th style="width: 1fr">Label Status</th>
+              <th style="width: 3fr">
+                <status-table [color]="ColorStatus.DEFAULT"
+                  >Labell</status-table
+                >
+              </th>
+            </tr>
+
+            <!-- Button -->
+            <tr>
+              <th style="width: 1fr">
+                <img src="./../assets/icon/info/ic-success.svg" alt="" />
+              </th>
+              <th style="width: 1fr">Button</th>
+              <th style="width: 3fr">
+                <app-button
+                  [color]="colorBtn.PRIMARY"
+                  [spacing]="spacingBtn.DEFAULT"
+                  (onClick)="goToFacebook()"
+                  >Go To Google</app-button
+                >
+              </th>
+            </tr>
+
+            <!-- Label Priority -->
+            <tr>
+              <th style="width: 1fr">
+                <img src="./../assets/icon/info/ic-success.svg" alt="" />
+              </th>
+              <th style="width: 1fr">Label Priority</th>
+              <th style="width: 3fr">
+                <label-priority>Labell</label-priority>
+              </th>
+            </tr>
+
+            <!-- Breadcrumbs -->
+            <tr>
+              <th style="width: 1fr">
+                <!-- <img src="./../assets/icon/info/ic-success.svg" alt="" /> -->
+              </th>
+              <th style="width: 1fr">Breadcrumbs</th>
+              <th style="width: 3fr">
+                <breadcrumbs
+                  [listBreadCrumbsSettings]="breadCrumbsSettings"
+                ></breadcrumbs>
+              </th>
+            </tr>
+
+            <!-- OnBoarding Modal -->
+            <tr>
+              <th style="width: 1fr">
+                <img src="./../assets/icon/info/ic-success.svg" alt="" />
+              </th>
+              <th style="width: 1fr">OnBoarding Modal</th>
+              <th style="width: 3fr">
+                <onboarding-modal
+                  [title]="'This is the modal’s header'"
+                  [description]="
+                    'Additional information that will help users understand the modal.'
+                  "
+                  [icon]="'onboarding-modal'"
+                  [colorBg]="'rgba(73, 86, 94, 0.5)'"
+                  [btnSettings]="btn__OnBoardingModalSettings"
+                ></onboarding-modal>
+              </th>
+            </tr>
+
+            <!-- Empty State -->
+            <tr>
+              <th style="width: 1fr">
+                <img src="./../assets/icon/info/ic-success.svg" alt="" />
+              </th>
+              <th style="width: 1fr">Empty State</th>
+              <th style="width: 3fr">
+                <empty-state
+                  [title]="'This is the empty state’s title'"
+                  [description]="'Additional inform'"
+                  [btnLinkSettings]="btnLink__EmptyStateSettings"
+                  [btnSettings]="btn__EmptyStateSettings"
+                ></empty-state>
+              </th>
+            </tr>
+
+            <tr>
+              <th></th>
+              <th style="width: 1fr">Banner</th>
+              <th style="width: 3fr">
+                <banner
+                  [description]="
+                    'https://www.figma.com/file/NT3D9te85pcox2j0MXvbR7igma.com/file/https://www.figma.com/file/NT3D9te85pcox2j0MXvbR7igma.com/file/'
+                  "
+                  [mode]="modeBanner.WARNING"
+                  [iconExit]="'./assets/icon/info/ic-exit.svg'"
+                  [btnSettings]="btn__BannerSettings"
+                  >Button</banner
+                >
+              </th>
+            </tr>
+            <tr>
+              <th></th>
+              <th style="width: 1fr">Flag</th>
+              <th style="width: 3fr">
+                <flag
+                  [color]="colorFlag.DEFAULT"
+                  [icon]="iconFlag.IMAGE"
+                  (onButtoClick)="funcButtonFlag($event)"
+                ></flag>
+              </th>
+            </tr>
+            <tr>
+              <th></th>
+              <th style="width: 1fr">Flag Description</th>
+              <th style="width: 3fr">
+                <flag
+                  [show]="showFlag"
+                  [color]="colorFlag.DEFAULT"
+                  [icon]="iconFlag.IMAGE"
+                  [btnSettings]="btn__FlagSettings"
+                  [title]="'kadsfkads'"
+                  [description]="
+                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloremque molestiae minus ad suscipit iste.'
+                  "
+                  (onButtoClick)="funcButtonFlag($event)"
+                ></flag>
+              </th>
+            </tr>
+            <tr>
+              <th></th>
+              <th style="width: 1fr">Flag Long</th>
+              <th style="width: 3fr">
+                <flag-long
+                  [title]="'Flag'"
+                  [color]="colorFlag.DEFAULT"
+                  [btnSettings]="btn__FlagLongSettings"
+                  [infoSettings]="infoFlagLongSettings"
+                  (onButtoClick)="funcButtonFlagLong($event)"
+                ></flag-long>
+              </th>
+            </tr>
+            <tr>
+              <th></th>
+              <th style="width: 1fr">Inline Helper</th>
+              <th style="width: 3fr">
+                <inline-helper [title]="'Title'">
+                  <div class="Example__Component"></div>
+                </inline-helper>
+              </th>
+            </tr>
+            <tr>
+              <th></th>
+              <th style="width: 1fr">Progress Bar</th>
+              <th style="width: 3fr">
+                <progress-bar [settings]="progressBarSettings"></progress-bar>
+              </th>
+            </tr>
+            <tr>
+              <th></th>
+              <th style="width: 1fr">Progress Traker</th>
+              <th style="width: 3fr; display: flex; flex-direction: row">
+                <progress-traker
+                  [settings]="progressTrakerSettings"
+                  (trackerClick)="showComponentTracker($event)"
+                ></progress-traker>
+                <inline-helper
+                  *ngIf="trackerVisible === true"
+                  [title]="labelName"
+                >
+                  <div class="Example__Component"></div>
+                </inline-helper>
+              </th>
+            </tr>
+            <tr>
+              <th></th>
+              <th style="width: 1fr">Progress Indicator</th>
+              <th style="width: 3fr">
+                <progress-indicator
+                  [title]="'Text'"
+                  [btnSettings]="btn__ProgressIndicatorSettings"
+                  [settings]="progressIndicatorSettings"
+                  (onButtoClick)="funcButtonProgressIndicator($event)"
+                ></progress-indicator>
+              </th>
+            </tr>
+            <tr>
+              <th></th>
+              <th style="width: 1fr">Section Message</th>
+              <th style="width: 3fr">
+                <section-message
+                  [title]="'Title'"
+                  [description]="
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus est quam, eu suscipit mi aliquet vel. Praesent nec sollicitudin nulla.'
+                  "
+                  [color]="colorSctMessage.WARNING"
+                  [btnSettings]="btn__SctMessageSettings"
+                  (onButtoClick)="funcButtonSctMessage($event)"
+                ></section-message>
+              </th>
+            </tr>
+            <tr>
+              <th></th>
+              <th style="width: 1fr">Text Field</th>
+              <th style="width: 3fr">
+                <text-field
+                  [input]="inputTextField.LEFT"
+                  [placeholder]="'Input Your Text'"
+                ></text-field>
+              </th>
+            </tr>
+            <tr>
+              <th></th>
+              <th style="width: 1fr">Text Field</th>
+              <th style="width: 3fr">
+                <text-area
+                  [size]="sizeTextArea.DEFAULT"
+                  [mode]="modeTextArea.DEFAULT"
+                  [placeholder]="'Enter long form text here'"
+                ></text-area>
+              </th>
+            </tr>
+            <tr>
+              <th></th>
+              <th style="width: 1fr">Pagination</th>
+              <th style="width: 3fr">
+                <pagination
+                  [btnSettings]="btn__PaginationSettings"
+                ></pagination>
+              </th>
+            </tr>
+            <tr>
+              <th></th>
+              <th style="width: 1fr">Pagination</th>
+              <th style="width: 3fr">
+                <pagination
+                  [btnSettings]="btn__PaginationSettings"
+                ></pagination>
+              </th>
+            </tr>
+            <tr>
+              <th></th>
+              <th style="width: 1fr">checkbox</th>
+              <th style="width: 3fr">
+                <checkbox></checkbox>
+              </th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <list-breadcrumbs></list-breadcrumbs> -->

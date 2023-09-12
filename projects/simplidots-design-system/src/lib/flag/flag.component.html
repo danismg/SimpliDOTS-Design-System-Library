@@ -1,0 +1,28 @@
+<div *ngIf="show === true" [class]="getClassBg()">
+  <div class="flag__container-top">
+    <div class="flag__title">
+      <img class="flag__ic-img" [src]="getClassIcon()" alt="" />
+      <p [class]="getClassTitle()">{{ title }}</p>
+      <a class="flag__frame__ic-exit flag__ic-exit">
+        <img
+          style="cursor: pointer"
+          (click)="closeComponent()"
+          [src]="iconExit"
+          alt=""
+        />
+      </a>
+    </div>
+  </div>
+  <div class="flag__container-down">
+    <p [class]="getClassDesc()">{{ description }}</p>
+    <div *ngIf="HiddenButtonList()" class="flag__button-list">
+      <app-button
+        *ngFor="let btnSetting of btnSettings"
+        [color]="btnSetting.color"
+        [spacing]="btnSetting.compact"
+        (onClick)="funcButton(btnSetting)"
+        >{{ btnSetting.title }}</app-button
+      >
+    </div>
+  </div>
+</div>

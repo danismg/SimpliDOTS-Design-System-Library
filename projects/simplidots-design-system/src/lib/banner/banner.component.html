@@ -1,0 +1,27 @@
+<div *ngIf="show === true" [class]="getClassBg()">
+  <div class="banner__item">
+    <div class="frame">
+      <img [src]="getSRC()" alt="" [hidden]="iconBanner()" />
+      <div [class]="getClassText()">
+        <p class="banner__text">
+          {{ description }}
+        </p>
+      </div>
+    </div>
+
+    <app-button
+      *ngFor="let btnSetting of btnSettings"
+      [color]="btnSetting.color"
+      [spacing]="btnSetting.compact"
+      (onClick)="funcButton($event)"
+      >{{ btnSetting.title }}</app-button
+    >
+  </div>
+  <img
+    style="cursor: pointer"
+    (click)="closeComponent()"
+    class="ic-exit"
+    [src]="iconExit"
+    alt=""
+  />
+</div>

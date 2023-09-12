@@ -1,0 +1,29 @@
+<div *ngIf="show === true" class="flag">
+  <div class="flag__container-top">
+    <div class="flag__title">
+      <img
+        style="cursor: pointer"
+        (click)="closeComponent()"
+        class="flag__ic-img"
+        src="iconExit"
+        alt=""
+      />
+      <div class="flag__title-list">
+        <p class="flag__title">{{ title }}</p>
+        <div *ngFor="let setting of infoSettings" class="flag__add-list">
+          <div class="line"></div>
+          <p class="flag__title">{{ setting.info }}</p>
+        </div>
+      </div>
+      <div class="flag__info__buttons">
+        <app-button
+          *ngFor="let btnSetting of btnSettings"
+          [color]="btnSetting.color"
+          [spacing]="btnSetting.compact"
+          (onClick)="funcButton(btnSetting)"
+          >{{ btnSetting.title }}</app-button
+        >
+      </div>
+    </div>
+  </div>
+</div>
