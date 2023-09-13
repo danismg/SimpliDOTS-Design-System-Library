@@ -10,7 +10,7 @@ import { FlagColor, FlagIcon } from '../../assets/beheviors/flag/FlagMode';
 })
 export class FlagComponent {
   @Input() color: FlagColor = FlagColor.DEFAULT;
-  @Input() icon: FlagIcon = FlagIcon.IMAGE;
+  @Input() icon!: string;
   @Input() show: boolean = true;
 
   @Input() title: string = "Flag's Title";
@@ -52,7 +52,7 @@ export class FlagComponent {
     return `flag__desc flag__desc-${FlagColor[this.color].toLowerCase()}`;
   }
   getClassIcon() {
-    return `./assets/icon/info/ic-${FlagIcon[this.icon].toLowerCase()}.svg `;
+    return `${this.icon.toLowerCase()}`;
   }
 
   closeComponent(): void {

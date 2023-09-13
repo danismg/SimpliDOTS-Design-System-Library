@@ -18,7 +18,7 @@ export class BannerComponent {
       'assets/icon/info/ic-exit.svg'
     );
   }
-  @Input() mode!: string;
+  @Input() mode: BannerMode = BannerMode.INFO;
   @Input() description: string = '';
   @Input() btnSettings: ButtonSetting[] = [];
   hidden: boolean = true;
@@ -31,20 +31,22 @@ export class BannerComponent {
   }
 
   getClassBg() {
-    return `banner banner-${this.mode.toLowerCase()}`;
+    return `banner banner-${BannerMode[this.mode].toLowerCase()}`;
   }
   getClassText() {
-    return `banner__text-btn banner__text-${this.mode.toLowerCase()}`;
+    return `banner__text-btn banner__text-${BannerMode[
+      this.mode
+    ].toLowerCase()}`;
   }
   getSRC() {
-    return `${this.mode.toLowerCase()}`;
+    return `./assets/icon/info/ic-${BannerMode[this.mode].toLowerCase()}.svg`;
   }
   closeComponent(): void {
     this.show = false;
   }
 
   iconBanner() {
-    if ((this.mode = 'warning' || BannerMode.DANGER)) {
+    if (BannerMode.WARNING || BannerMode.DANGER) {
       this.hidden = false;
     } else {
       this.hidden = true;

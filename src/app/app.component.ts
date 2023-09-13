@@ -93,7 +93,7 @@ export class AppComponent {
       {
         title: 'Understood',
         color: ColorEnum.PRIMARY,
-        compact: SpacingEnum.COMPACT,
+        compact: SpacingEnum.COMPACT
       },
     ];
   }

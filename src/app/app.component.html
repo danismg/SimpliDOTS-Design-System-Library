@@ -119,7 +119,7 @@
                   [description]="
                     'https://www.figma.com/file/NT3D9te85pcox2j0MXvbR7igma.com/file/https://www.figma.com/file/NT3D9te85pcox2j0MXvbR7igma.com/file/'
                   "
-                  [mode]="'./assets/icon/info/ic-success.svg'"
+                  [mode]="modeBanner.WARNING"
                   [iconExit]="'./assets/icon/info/ic-exit.svg'"
                   [btnSettings]="btn__BannerSettings"
                   >Button</banner
@@ -132,8 +132,9 @@
               <th style="width: 3fr">
                 <flag
                   [color]="colorFlag.DEFAULT"
-                  [icon]="iconFlag.IMAGE"
+                  [icon]="'./assets/icon/info/ic-image.svg'"
                   (onButtoClick)="funcButtonFlag($event)"
+                  [iconExit]="'./assets/icon/info/ic-exit-small.svg'"
                 ></flag>
               </th>
             </tr>
@@ -142,9 +143,10 @@
               <th style="width: 1fr">Flag Description</th>
               <th style="width: 3fr">
                 <flag
+                  [iconExit]="'./assets/icon/info/ic-exit-small.svg'"
                   [show]="showFlag"
                   [color]="colorFlag.DEFAULT"
-                  [icon]="iconFlag.IMAGE"
+                  [icon]="'./assets/icon/info/ic-image.svg'"
                   [btnSettings]="btn__FlagSettings"
                   [title]="'kadsfkads'"
                   [description]="
